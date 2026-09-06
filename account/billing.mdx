@@ -1,0 +1,54 @@
+---
+title: "Manage Billing and Payment Methods on LocalSite"
+sidebarTitle: "Billing"
+description: "View your billing history, update your credit card, download invoices, and manage your subscription payment settings in LocalSite."
+---
+
+All of your billing information lives in one place: **Dashboard → Account → Billing**. From there you can review past payments, update your credit card, download invoices for your records, and understand exactly when and why you're charged. Keeping your payment details current ensures your site stays live without any interruption.
+
+## Viewing Your Billing History
+
+The **Billing** tab displays a full history of every payment made on your account, listed in reverse chronological order. Each row shows the payment date, the amount charged, and the plan it corresponds to. Use this list to quickly confirm that a payment went through or to look up a specific charge.
+
+Every entry includes a **Download Invoice** link so you can pull up a PDF receipt for that transaction whenever you need it.
+
+## Updating Your Payment Method
+
+<Steps>
+  <Step title="Open Billing settings">
+    Go to **Dashboard → Account → Billing**.
+  </Step>
+  <Step title="Start the update">
+    Click **Update Payment Method** to open the card entry form.
+  </Step>
+  <Step title="Enter your new card details">
+    Type in your new credit or debit card number, expiry date, and security code.
+  </Step>
+  <Step title="Save the new card">
+    Click **Save Card**. Your new card is saved immediately and will be used for all future charges. Your previous card is removed from the account.
+  </Step>
+</Steps>
+
+<Note>
+  LocalSite uses **Stripe** to process all payments. Your full card details are encrypted and handled entirely by Stripe — they are never stored on LocalSite's servers.
+</Note>
+
+## Downloading Invoices
+
+Every invoice in your billing history can be downloaded as a **PDF** by clicking the **Download Invoice** link next to that payment. These PDFs include your business name, the charge amount, the billing date, and a unique invoice number — everything you need for tax filings or accounting records.
+
+<Tip>
+  If your accountant or bookkeeper needs regular receipts, enable **Billing Receipts** in your notification settings so an invoice is emailed to you automatically after each successful payment.
+</Tip>
+
+## Understanding Your Charges
+
+LocalSite bills you on a monthly cycle that starts on the date you first subscribed. Your card is charged on that same calendar date every month going forward.
+
+For example, if you signed up on **March 15**, you'll be billed on the **15th of each month**. If your billing date falls on a day that doesn't exist in a given month (such as the 31st in a 30-day month), the charge is processed on the last day of that month instead.
+
+If you upgrade or downgrade mid-cycle, any difference in plan cost is prorated automatically — you'll only pay for the days you used each plan.
+
+<Warning>
+  If a payment fails, your site will remain live for a **7-day grace period** while LocalSite retries the charge. Update your payment method before the grace period ends to avoid your site going offline and your paid features being suspended.
+</Warning>

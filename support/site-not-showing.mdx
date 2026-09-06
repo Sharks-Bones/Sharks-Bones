@@ -1,0 +1,66 @@
+---
+title: "My Website Isn't Showing Up — How to Fix It"
+sidebarTitle: "Site Not Showing"
+description: "Step-by-step troubleshooting for when your LocalSite website isn't visible, shows a blank page, or returns an error to visitors."
+---
+
+If your website isn't appearing for visitors — or for you — don't panic. The most common causes are a site that hasn't been published yet, a browser cache serving an outdated version of the page, or a custom domain that's still propagating. Work through the sections below in order to pinpoint the problem and get your site back online.
+
+<Note>
+  If you see a **"Site Under Maintenance"** message, LocalSite may be in the middle of a brief system update. Wait 5–10 minutes and try visiting your site again before troubleshooting further.
+</Note>
+
+## Is Your Site Published?
+
+The first thing to check is whether your site is actually live. Go to **Dashboard → Settings → Site Status** and look at the current status indicator:
+
+- **Published** — your site is live and visible to everyone. Move on to the next section.
+- **Draft** — your site is saved but not yet live. Click **Publish** to make it visible.
+- **Offline** — your site has been taken offline. Click **Publish** to bring it back up.
+
+## Check Your Browser Cache
+
+Your browser stores a cached copy of websites to load them faster. If you recently published changes, your browser might be showing you an old version — or even a blank page. Try these steps to rule that out:
+
+<Steps>
+  <Step title="Force-reload the page">
+    Press **Ctrl + Shift + R** on Windows or **Cmd + Shift + R** on Mac to bypass your browser's cache and reload the latest version of the page directly from LocalSite.
+  </Step>
+  <Step title="Open an incognito or private window">
+    Private browsing windows don't use your regular browser cache. Open one and navigate to your site URL. If the site loads correctly there, the issue is your browser cache and a force-reload (step 1) should clear it.
+  </Step>
+  <Step title="Try a different device">
+    Open your site on your phone or another computer. If it loads fine on a different device, the problem is isolated to your original browser or machine.
+  </Step>
+</Steps>
+
+## Custom Domain Not Working
+
+If you recently connected a custom domain (for example, `www.yourbusiness.com`), DNS propagation may still be in progress — this can take anywhere from 10 minutes to 48 hours after you update your DNS records.
+
+To confirm that your site itself is online and working, visit your free LocalSite address directly:
+
+```
+yourbusiness.localsite.com
+```
+
+If your site loads at the LocalSite address but not at your custom domain, the issue is with DNS propagation or your domain settings — not with your site. See our [Domain Issues guide](/support/domain-issues) for detailed troubleshooting steps.
+
+## The Page Loads But Looks Broken
+
+If your site opens but the layout looks wrong, images are missing, or sections appear out of order, try the following:
+
+1. **Clear your browser cache** — press Ctrl + Shift + Delete (Windows) or Cmd + Shift + Delete (Mac) to open your browser's clear cache tool, then reload the page.
+2. **Test in a different browser** — open your site in Chrome, Firefox, or Safari to see if the issue is browser-specific.
+3. **Check your page sections** — log in to your LocalSite dashboard, open the page editor, and confirm that you haven't accidentally hidden all the sections on a page. Hidden sections show a crossed-out eye icon — click it to make them visible again.
+
+## When to Contact Support
+
+If you've worked through every section above and your site is still not showing correctly, our support team is ready to help. To get the fastest resolution, include the following information in your message:
+
+- **Your site URL** (both your LocalSite address and your custom domain, if applicable)
+- **The browser and device** you're using (for example, Chrome on a Windows laptop)
+- **A screenshot** of the error or blank page you see
+- **Your account email address**
+
+Reach us from the **Help** menu in your dashboard or visit our [support page](/support).

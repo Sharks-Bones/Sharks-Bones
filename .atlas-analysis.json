@@ -1,13 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "LocalSite",
+  "projectDescription": "A platform that helps local businesses quickly launch, manage, and modernize their web presence — even with no prior website or technical experience.",
   "theme": "almond",
-  "name": "LocalSite",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -81,23 +79,28 @@
       }
     ]
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@localsite.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Get Started Free",
-      "href": "https://app.localsite.com/signup"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/localsite",
-      "facebook": "https://facebook.com/localsite"
-    }
-  }
+  "keyFeatures": [
+    "Drag-and-drop website builder with local business templates",
+    "One-click publishing with free subdomain or custom domain",
+    "Built-in contact forms and click-to-call buttons",
+    "Google Maps integration for location and directions",
+    "Photo gallery and business image management",
+    "Online booking and appointment scheduling",
+    "Mobile-responsive design out of the box",
+    "SEO tools to help customers find you on Google",
+    "Business hours, services, and menu pages",
+    "Simple account dashboard with no technical skills required"
+  ],
+  "publicApiSurface": [
+    "Website builder editor",
+    "Template library",
+    "Domain management settings",
+    "Contact form configuration",
+    "Photo gallery uploader",
+    "Booking/appointment scheduler",
+    "Google Maps embed widget",
+    "SEO settings panel",
+    "Account & billing dashboard",
+    "Mobile preview mode"
+  ]
 }

@@ -1,0 +1,50 @@
+---
+title: "Fix Domain Connection Problems on LocalSite"
+sidebarTitle: "Domain Issues"
+description: "Troubleshoot common domain connection problems — including DNS errors, pending verification, and SSL certificate issues — when linking a custom domain to LocalSite."
+---
+
+Connecting a custom domain to your LocalSite website is usually straightforward, but occasionally things don't go as planned. DNS propagation delays, leftover records from a previous host, and typos in your settings are the most common culprits. Work through the sections below to identify and fix the issue.
+
+## DNS Changes Haven't Propagated Yet
+
+When you update your DNS records at your domain registrar, the changes don't take effect instantly across the internet. Depending on your registrar and your previous DNS settings, propagation can take anywhere from **10 minutes to 48 hours**.
+
+To check whether your new records are visible globally, visit [dnschecker.org](https://dnschecker.org) and enter your domain name. Look for your CNAME record to appear with a green checkmark across most locations. If you still see the old records in many regions, give it more time before troubleshooting further.
+
+## Domain Verification is Stuck on "Pending"
+
+If your domain has been showing "Pending" for more than an hour after you updated your DNS records, work through these steps:
+
+<Steps>
+  <Step title="Re-check your DNS records">
+    Open your LocalSite **Dashboard → Settings → Domain** and compare the exact values shown there against what you entered at your registrar. Even a single character difference will cause verification to fail.
+  </Step>
+  <Step title="Remove any accidental trailing period">
+    Some registrar interfaces automatically add a period (`.`) to the end of a hostname field. Check that your CNAME record's name and value don't have an unexpected `.` at the end — delete it if so.
+  </Step>
+  <Step title="Remove old conflicting records">
+    If your domain previously pointed to another hosting provider, delete any old `A` records or `CNAME` records that still point to that host. Conflicting records prevent LocalSite from verifying ownership.
+  </Step>
+  <Step title="Re-trigger verification">
+    Wait at least 1 hour after making any changes, then return to **Dashboard → Settings → Domain** and click **Verify Connection** to prompt LocalSite to check your records again.
+  </Step>
+</Steps>
+
+## My Site Shows "Not Secure" or an SSL Warning
+
+LocalSite automatically provisions a free SSL certificate for your domain once verification is complete. You don't need to purchase or install anything yourself. The certificate is usually active within a few minutes of successful verification.
+
+If visitors still see a "Not Secure" warning or a certificate error **more than 1 hour after your domain was successfully verified**, contact our support team. Include your domain name and a screenshot of the warning so we can investigate quickly.
+
+## I Accidentally Pointed the Wrong Domain
+
+If you connected the wrong domain to your LocalSite, you can remove it at any time. Go to **Dashboard → Settings → Domain → Remove Domain**. Once removed, add the correct domain from that same screen and follow the DNS setup steps shown there.
+
+<Warning>
+  Removing a domain from LocalSite does **not** delete it from your domain registrar. Your domain registration remains active and yours to keep. However, you'll need to log in to your registrar separately and update or remove the DNS records you previously added — otherwise visitors to that domain may see an error page.
+</Warning>
+
+<Tip>
+  If you're not sure which registrar manages your domain, search your email inbox for **"domain registration"** or **"domain confirmation"**. The original registration confirmation email will name the registrar and usually includes a link to log in to their control panel.
+</Tip>

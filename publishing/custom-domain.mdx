@@ -1,0 +1,80 @@
+---
+title: "Connect Your Own Domain Name to LocalSite"
+sidebarTitle: "Custom Domain"
+description: "Point your existing domain name (like yourbusiness.com) to your LocalSite website by updating a few DNS settings with your domain registrar."
+---
+
+Using your own domain name — like `yourbusiness.com` — instantly makes your website look more professional and trustworthy to customers. It also helps with Google ranking, since search engines favor sites with dedicated domain names over generic subdomains. Setting it up takes about 10 minutes of work on your end, and LocalSite handles the rest automatically.
+
+## Requirements
+
+Connecting a custom domain requires the **Starter plan or higher**. If you're currently on the free plan, visit [Plans & Pricing](/account/plans-pricing) to upgrade before following the steps below.
+
+## If You Already Own a Domain
+
+If you've already purchased a domain from a registrar like GoDaddy, Namecheap, or Google Domains, follow these steps to connect it to your LocalSite website.
+
+<Steps>
+  <Step title="Open Domain Settings in LocalSite">
+    In your LocalSite dashboard, go to **Settings → Domain**.
+  </Step>
+  <Step title="Enter your domain name">
+    Click **Connect a Domain** and type in your domain (for example, `mybusiness.com`). Click **Continue**.
+  </Step>
+  <Step title="Note the DNS records">
+    LocalSite displays two DNS records you'll need to add — a **CNAME record** and an **A record**. Keep this page open while you work in your registrar's dashboard.
+  </Step>
+  <Step title="Log in to your domain registrar">
+    Open a new browser tab and log in to the registrar where you purchased your domain (GoDaddy, Namecheap, Google Domains, etc.). Navigate to the **DNS settings** for your domain — this is sometimes called "DNS Management," "Zone Editor," or "Advanced DNS."
+  </Step>
+  <Step title="Add the CNAME record">
+    Create a new CNAME record with these values:
+    - **Host / Name:** `www`
+    - **Points to / Value:** `sites.localsite.com`
+
+    Save the record before moving on.
+  </Step>
+  <Step title="Add the A record">
+    Create a new A record with these values:
+    - **Host / Name:** `@`
+    - **Points to / Value:** `76.76.21.21`
+
+    Save this record as well.
+  </Step>
+  <Step title="Verify the connection in LocalSite">
+    Return to your LocalSite dashboard and click **Verify Connection**. LocalSite will check whether the DNS records are in place.
+  </Step>
+  <Step title="Wait for DNS propagation">
+    DNS changes can take anywhere from **10 minutes to 48 hours** to fully propagate across the internet. If verification doesn't succeed right away, wait a little while and try again — this is completely normal.
+  </Step>
+</Steps>
+
+<Note>
+  LocalSite automatically provisions a free SSL certificate (the padlock icon in the browser address bar) once your domain is successfully connected. You don't need to set this up yourself.
+</Note>
+
+## If You Need to Buy a Domain
+
+If you don't own a domain yet, you'll need to purchase one before connecting it. We recommend the following registrars — all are reputable, easy to use, and reasonably priced:
+
+<CardGroup cols={3}>
+  <Card title="Namecheap" icon="tag">
+    Great value, beginner-friendly DNS interface, and free privacy protection included.
+  </Card>
+  <Card title="GoDaddy" icon="globe">
+    One of the most widely used registrars with 24/7 customer support.
+  </Card>
+  <Card title="Google Domains" icon="google">
+    Clean, straightforward interface that's easy to navigate for first-time buyers.
+  </Card>
+</CardGroup>
+
+Most `.com` domain names cost between **$10 and $15 per year**. Once you've purchased your domain, return to the steps above to connect it to your LocalSite website.
+
+<Tip>
+  Use a `.com` domain if at all possible — customers trust it and it's easier to say out loud when giving someone your website address.
+</Tip>
+
+## Setting www vs. Non-www
+
+You don't need to choose between `www.yourdomain.com` and `yourdomain.com` — LocalSite supports both automatically. Whichever version a visitor types into their browser, they'll land on your site. Both versions redirect to each other seamlessly, so you'll never lose a visitor over a missing `www`.
